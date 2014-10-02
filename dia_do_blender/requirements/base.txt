@@ -1,0 +1,18 @@
+# Django
+django==1.6.2
+
+# Admin theme
+bootstrap-admin==0.3.0
+
+# Views
+django-braces==1.4.0
+
+# Forms
+django-bootstrap3==4.2.0
+
+# Models
+South==0.8.4
+pytz==2014.2
+
+# localization extras
+django-localflavor==1.0
