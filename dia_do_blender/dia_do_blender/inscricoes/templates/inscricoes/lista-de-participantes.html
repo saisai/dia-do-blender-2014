@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Lista de Participantes para Impressão - Dia do Blender 2014</title>
+    <link type="text/css" rel="stylesheet" media="all" href="{% static "inscricoes/css/lista-de-participantes.css" %}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="conteudo">
+          {% for participante in participantes %}
+            <p><strong>Nome:</strong> {{ participante.nome }}</p>
+            <p><strong>Data de Nascimento:</strong> {{ participante.data_nascimento }}</p>
+            <p><strong>Sexo:</strong> {{ participante.sexo }}</p>
+            <p><strong>CPF:</strong> {{ participante.cpf }}</p>
+            <p><strong>- RG:</strong> {{ participante.rg }}</p>
+            <p><strong>- RG - Órgão expedidor:</strong> {{ participante.rg_orgao_expedidor }}</p>
+            <p><strong>- RG - UF:</strong> {{ participante.rg_uf }}</p>
+            <p><strong>- RG - Data de Expedição:</strong> {{ participante.rg_data_expedicao }}</p>
+
+            <p><strong>Rua / Av./ Edif. / Etc.:</strong> {{ participante.logradouro }}</p>
+            <p><strong>Número:</strong> {{ participante.numero }}</p>
+            <p><strong>CEP:</strong> {{ participante.cep }}</p>
+            <p><strong>Bairro:</strong> {{ participante.bairro }}</p>
+            <p><strong>Cidade:</strong> {{ participante.cidade }}</p>
+            <p><strong>UF:</strong> {{ participante.uf }}</p>
+            <p><strong>Email:</strong> {{ participante.email }}</p>
+            <p><strong>Telefone:</strong> {{ participante.telefone }}</p>
+            <p><strong>Telefone Alternativo:</strong> {{ participante.telefone_alternativo }}</p>
+            <br class="page-break" />
+          {% endfor %}
+        </div>
+      </div><!-- End row -->
+    </div><!-- End container -->
+  </body>
+</html>

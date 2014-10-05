@@ -19,3 +19,9 @@ class CadastrarParticipante(SuccessURLRedirectListMixin, generic.CreateView):
     def get_success_url(self):
         messages.success(self.request, "Obrigado, agora você está cadastrado!")
         return reverse_lazy('inscricoes-cadastrar-participante')
+
+
+class ListarParticipantes(generic.ListView):
+    template_name = 'inscricoes/lista-de-participantes.html'
+    model = Participante
+    context_object_name = 'participantes'
