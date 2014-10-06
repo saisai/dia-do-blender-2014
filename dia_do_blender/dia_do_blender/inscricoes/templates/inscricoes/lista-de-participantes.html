@@ -13,7 +13,7 @@
           {% for participante in participantes %}
             <p><strong>Nome:</strong> {{ participante.nome }}</p>
             <p><strong>Data de Nascimento:</strong> {{ participante.data_nascimento }}</p>
-            <p><strong>Sexo:</strong> {{ participante.sexo }}</p>
+            <p><strong>Sexo:</strong> {{ participante.get_sexo_display }}</p>
             <p><strong>CPF:</strong> {{ participante.cpf }}</p>
             <p><strong>- RG:</strong> {{ participante.rg }}</p>
             <p><strong>- RG - Órgão expedidor:</strong> {{ participante.rg_orgao_expedidor }}</p>
